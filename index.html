@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div>    
+        <h1 class="title">Weather App</h1>
+        <br>
+        <div class="container">
+          <div class="row align-items-start">
+            <div class="col">
+              <label class="sr-only mx-sm-3 mb-2">Enter your city: </label>
+              <form id="formSubmit" class="form-inline" method="post">
+                <div class="form-group mx-sm-3 mb-2">
+                  <input type="text" name="city" class="form-control" placeholder="City Name">
+                </div>
+
+                <button type="submit" class="btn btn-primary mx-sm-3 mb-2" 
+                onclick="updateData(document.querySelector('form').value)">
+                Check Weather
+                </button>
+
+              </form>
+            </div>
+            <div class="col">
+              <h4>Weather Details</h4>
+              <div class="card d-none details" id="weatherCard" style="width: 18rem;">
+                <div class="card-body card-elements">
+                  <h5 class="card-title">City Name</h5>
+                </div>
+                <ul class="list-group list-group-flush card-elements">
+                  <li class="list-group-item">Weather Condition</li>
+                  <li class="list-group-item">Temperature  &nbsp; <span>UNIT</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="./scripts/weather.js"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
